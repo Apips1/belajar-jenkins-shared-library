@@ -1,4 +1,4 @@
-deff call(){
+def call(){
 
 node {
     stage('Hello World') {
