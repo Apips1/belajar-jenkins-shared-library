@@ -1,20 +1,33 @@
-def call(){
+deff call(){
 
 node {
-    stage("Maven Clean")
-    {
-        maven(["clean"])
+    stage('Hello World') {
+        hello.world()
     }
-    stage("Maven Compile")
-    {
-        maven(["compile"])
+
+    stage('Hello Groovy') {
+        Output.hello(this, 'Groovy')
     }
-    stage("Maven Test")
+
+    stage('Global Variable') {
+        echo author()
+        echo author.name()
+        echo author.channel()
+    }
+
+    stage("Hello Person")
     {
-        maven(["test"])
+        hello.person([
+            firstName: 'Afif',
+            lastName: 'Nugroho',
+        ])
+    }
+
+    stage("Library Resources"){
+        def config = libraryResource("config/build.json")
+        echo(config)
+
     }
 
 }
-
 }
-  
