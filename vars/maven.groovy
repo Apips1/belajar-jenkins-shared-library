@@ -1,4 +1,3 @@
 def call(String command){
-    bat "mvn clean compile"
-
+    bat ("./mvnw ${command}")
 }
