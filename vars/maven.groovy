@@ -1,3 +1,3 @@
 def call(String command){
-    sh("./mvnw ${command}")
+    bat("./mvnw.cmd ${command}")
 }
