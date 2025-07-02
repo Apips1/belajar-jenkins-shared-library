@@ -5,10 +5,6 @@ node {
         hello.world()
     }
 
-    stage('Hello Groovy') {
-        Output.hello(this, 'Groovy')
-    }
-
     stage('Global Variable') {
         echo author()
         echo author.name()
